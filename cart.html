@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrillWave | Cart & Orders</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="main-navbar">
+  <div class="nav-container">
+    <a class="brand" href="index.html"><span>🍽</span> GrillWave</a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html" class="active">Cart & Orders</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="admin.html" id="adminLink">Admin</a></li>
+      <li><a href="#" id="logoutBtn">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div>
+    <span>Your Cart</span>
+    <h1>Review Your Order</h1>
+    <p>Update quantities, remove meals, and place your order.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section cream-bg">
+    <div class="container order-layout">
+
+      <aside class="cart-box">
+        <h2>Your Cart</h2>
+
+        <p class="muted-text">
+          Your order will use the name, phone, and address saved in your profile.
+        </p>
+
+        <div id="feedback" class="feedback"></div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-total">
+          <strong id="checkoutTotal">0 EGP</strong>
+        </div>
+
+        <button id="checkoutBtn" class="main-btn full">Place Order</button>
+        <button id="clearCartBtn" class="danger-btn full">Clear Cart</button>
+        <a href="menu.html" class="outline-dark-btn full text-center">Back To Menu</a>
+      </aside>
+
+      <aside class="cart-box">
+        <h2>Your Order History</h2>
+
+        <div class="summary-bar">
+          <span id="cartCount">Cart: 0</span>
+          <span id="cartTotal">Total: 0 EGP</span>
+        </div>
+
+        <div id="orderHistory"></div>
+      </aside>
+
+    </div>
+  </section>
+</main>
+
+<button id="topBtn" class="top-btn">↑</button>
+
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

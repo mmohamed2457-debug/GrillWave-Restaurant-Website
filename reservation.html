@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrillWave | Reservation</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="main-navbar">
+  <div class="nav-container">
+    <a class="brand" href="index.html"><span>🍽</span> GrillWave</a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html">Cart & Orders</a></li>
+      <li><a href="reservation.html" class="active">Reservation</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="admin.html" id="adminLink">Admin</a></li>
+      <li><a href="#" id="logoutBtn">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div>
+    <span>Book a Table</span>
+    <h1>Reserve Your Place</h1>
+    <p>Choose your date, time, and number of guests.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container form-layout">
+
+      <form id="reservationForm" class="smart-form">
+        <h2>Reservation Form</h2>
+
+        <label>Name</label>
+        <input id="resName" type="text" placeholder="Full name">
+
+        <label>Phone</label>
+        <input id="resPhone" type="tel" placeholder="Phone number">
+
+        <label>Date</label>
+        <input id="resDate" type="date">
+
+        <label>Time</label>
+        <input id="resTime" type="time">
+
+        <label>Guests</label>
+        <input id="resGuests" type="number" min="1" placeholder="Number of guests">
+
+        <p id="reservationError" class="error-msg"></p>
+
+        <button class="main-btn" type="submit">Save Reservation</button>
+      </form>
+
+      <div class="saved-box">
+        <h2>Saved Reservations</h2>
+        <p class="muted-text">Your reservations appear here after saving.</p>
+        <div id="reservationList"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<button id="topBtn" class="top-btn">↑</button>
+
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

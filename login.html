@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrillWave | Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-page">
+
+<div class="login-wrapper">
+  <div class="login-card">
+    <h1>🍽 GrillWave</h1>
+
+    <p class="login-text">
+      Login or create your account to start ordering.
+    </p>
+
+    <div class="login-tabs">
+      <button id="showLogin" class="tab-btn active">Login</button>
+      <button id="showRegister" class="tab-btn">Register</button>
+    </div>
+
+    <form id="loginForm">
+      <label>Email</label>
+      <input id="loginEmail" type="email" placeholder="Enter your email">
+
+      <label>Password</label>
+      <input id="loginPassword" type="password" placeholder="Enter password">
+
+      <button type="submit" class="main-btn full">Login</button>
+
+      <p id="loginMessage" class="error-msg"></p>
+
+      <div class="demo-admin">
+        <h4>Admin Account</h4>
+        <p>Email: abdohossam898@gmail.com</p>
+        <p>Password: 123123123</p>
+      </div>
+    </form>
+
+    <form id="registerForm" class="hidden">
+      <label>Full Name</label>
+      <input id="regName" type="text" placeholder="Your full name">
+
+      <label>Email</label>
+      <input id="regEmail" type="email" placeholder="example@email.com">
+
+      <label>Password</label>
+      <input id="regPassword" type="password" placeholder="Create password">
+
+      <label>Phone Number</label>
+      <input id="regPhone" type="tel" placeholder="01xxxxxxxxx">
+
+      <label>Address</label>
+      <input id="regAddress" type="text" placeholder="Street, Area, City">
+
+      <button type="submit" class="main-btn full">Create Account</button>
+
+      <p id="registerMessage" class="error-msg"></p>
+    </form>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
