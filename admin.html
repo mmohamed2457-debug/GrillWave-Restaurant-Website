@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrillWave | Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-page">
+
+<aside class="admin-sidebar">
+  <div class="admin-logo">
+    <span>🍽</span>
+    <h2>GrillWave</h2>
+    <p>Admin Panel</p>
+  </div>
+
+  <nav class="admin-menu">
+    <a href="#overview">Dashboard</a>
+    <a href="#users">Users</a>
+    <a href="#orders">Orders</a>
+    <a href="#categories">Categories</a>
+    <a href="#menu-items">Menu Items</a>
+    <a href="#" id="logoutBtn">Logout</a>
+  </nav>
+</aside>
+
+<main class="admin-main">
+
+  <header class="admin-topbar">
+    <div>
+      <h1>Restaurant Dashboard</h1>
+      <p>Manage users, orders, categories, and menu items.</p>
+    </div>
+
+    <div class="admin-profile">
+      <span>Admin</span>
+      <strong>abdohossam898@gmail.com</strong>
+    </div>
+  </header>
+
+  <section id="overview" class="admin-section">
+    <div class="admin-stats">
+      <article class="admin-stat-card">
+        <span>👥</span>
+        <h3>Total Users</h3>
+        <p id="adminUsersCount">0</p>
+      </article>
+
+      <article class="admin-stat-card">
+        <span>🧾</span>
+        <h3>Total Orders</h3>
+        <p id="adminOrdersCount">0</p>
+      </article>
+
+      <article class="admin-stat-card">
+        <span>📂</span>
+        <h3>Categories</h3>
+        <p id="adminCategoriesCount">0</p>
+      </article>
+
+      <article class="admin-stat-card">
+        <span>🍔</span>
+        <h3>Menu Items</h3>
+        <p id="adminMenuCount">0</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="users" class="admin-section">
+    <div class="admin-card">
+      <div class="admin-card-head">
+        <div>
+          <h2>All Users</h2>
+          <p>View customer information without showing passwords.</p>
+        </div>
+      </div>
+
+      <div id="adminUsers" class="admin-list"></div>
+    </div>
+  </section>
+
+  <section id="orders" class="admin-section">
+    <div class="admin-card">
+      <div class="admin-card-head">
+        <div>
+          <h2>All Orders</h2>
+          <p>View delivery details and delete any order.</p>
+        </div>
+      </div>
+
+      <div id="adminOrders" class="admin-list"></div>
+    </div>
+  </section>
+
+  <section id="categories" class="admin-section">
+    <div class="admin-two-columns">
+      <form id="categoryForm" class="admin-card admin-form">
+        <h2>Add Category</h2>
+
+        <label>Category Name</label>
+        <input id="newCategoryName" type="text" placeholder="Example: seafood">
+
+        <p id="categoryError" class="error-msg"></p>
+
+        <button class="main-btn" type="submit">Add Category</button>
+      </form>
+
+      <div class="admin-card">
+        <h2>All Categories</h2>
+        <p>Edit or delete restaurant categories.</p>
+        <div id="adminCategories" class="admin-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu-items" class="admin-section">
+    <div class="admin-two-columns">
+      <form id="adminMenuForm" class="admin-card admin-form">
+        <h2>Add Menu Item</h2>
+
+        <label>Meal Name</label>
+        <input id="adminItemName" type="text" placeholder="Meal name">
+
+        <label>Category</label>
+        <input id="adminItemCategory" type="text" placeholder="foods / drinks / desserts">
+
+        <label>Price</label>
+        <input id="adminItemPrice" type="number" placeholder="Price">
+
+        <label>Image Link</label>
+        <input id="adminItemImage" type="text" placeholder="Image URL">
+
+        <label>Description</label>
+        <textarea id="adminItemDesc" rows="4" placeholder="Meal description"></textarea>
+
+        <p id="adminItemError" class="error-msg"></p>
+
+        <button class="main-btn" type="submit">Add Menu Item</button>
+      </form>
+
+      <div class="admin-card">
+        <h2>All Menu Items</h2>
+        <p>Delete menu items from the restaurant menu.</p>
+        <div id="adminMenuItems" class="admin-list"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

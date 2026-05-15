@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrillWave | Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="main-navbar">
+  <div class="nav-container">
+    <a class="brand" href="index.html"><span>🍽</span> GrillWave</a>
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="cart.html">Cart & Orders</a></li>
+      <li><a href="reservation.html">Reservation</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="admin.html" id="adminLink">Admin</a></li>
+      <li><a href="#" id="logoutBtn">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div>
+    <span>Contact Us</span>
+    <h1>We Are Happy To Hear From You</h1>
+    <p>Send feedback, questions, or special requests.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container form-layout">
+
+      <form id="contactForm" class="smart-form">
+        <h2>Send Message</h2>
+
+        <label>Name</label>
+        <input id="contactName" type="text" placeholder="Your name">
+
+        <label>Email</label>
+        <input id="contactEmail" type="email" placeholder="example@email.com">
+
+        <label>Message</label>
+        <textarea id="contactMessage" rows="6" placeholder="Write your message"></textarea>
+
+        <p id="contactError" class="error-msg"></p>
+
+        <button class="main-btn" type="submit">Save Message</button>
+      </form>
+
+      <div class="saved-box">
+        <h2>Saved Messages</h2>
+        <p class="muted-text">Your messages appear here after saving.</p>
+        <div id="messageList"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<button id="topBtn" class="top-btn">↑</button>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>GrillWave</h3>
+      <p>A modern casual restaurant serving burgers, grilled meals, pizza, drinks, and desserts.</p>
+    </div>
+
+    <div>
+      <h4>Opening Hours</h4>
+      <p>Saturday to Thursday: 12:00 PM - 12:00 AM<br>Friday: 2:00 PM - 1:00 AM</p>
+    </div>
+
+    <div>
+      <h4>Visit Us</h4>
+      <p>Enjoy fresh food, friendly service, online ordering, and table reservations.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
